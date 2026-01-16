@@ -1,91 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Yasiya Whatsapp Service</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Yasiya WhatsApp Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  text-align: center;
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
-/* RGB Animation */
-@keyframes rgb {
-  0% { box-shadow: 0 0 15px red; }
-  25% { box-shadow: 0 0 15px lime; }
-  50% { box-shadow: 0 0 15px cyan; }
-  75% { box-shadow: 0 0 15px magenta; }
-  100% { box-shadow: 0 0 15px red; }
-}
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-/* Opening Text */
-#intro {
-  font-size: 28px;
-  margin-top: 40px;
-  animation: rgb 2s infinite;
-  padding: 15px;
-  display: inline-block;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
 
-/* Card */
-.card {
-  margin: 30px auto;
-  width: 90%;
-  max-width: 400px;
-  background: #111;
-  padding: 20px;
-  border-radius: 15px;
-  animation: rgb 3s infinite;
-}
+    body {
+      background: radial-gradient(circle at top, #0f2027, #000);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-/* Buttons */
-.btn {
-  display: block;
-  margin: 10px 0;
-  padding: 12px;
-  text-decoration: none;
-  color: white;
-  border-radius: 8px;
-  background: #000;
-  animation: rgb 2s infinite;
-}
+    /* Anime glowing lines */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        120deg,
+        rgba(0,255,213,0.05),
+        rgba(0,255,213,0.05) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+      pointer-events: none;
+    }
 
-/* Images */
-img {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 10px;
-}
-</style>
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00ffd5;
+      text-shadow: 0 0 20px #00ffd5;
+      min-height: 60px;
+    }
+
+    p {
+      opacity: 0.85;
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      border-radius: 40px;
+      background: linear-gradient(45deg, #00ffd5, #00aaff);
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 25px #00ffd5;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 45px #00ffd5;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0,255,213,0.15);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 35px rgba(0,255,213,0.6);
+    }
+
+    .card h3 {
+      color: #00ffd5;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.6;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
-
 <body>
 
-<div id="intro">🔥 Yasiya Whatsapp Service 🔥</div>
+  <!-- HERO -->
+  <header>
+    <h1 id="typing"></h1>
+    <p data-aos="fade-up">Dark Anime Style WhatsApp Automation Services</p>
+    <a href="https://wa.me/94774707462" class="btn" data-aos="zoom-in">Contact on WhatsApp</a>
+  </header>
 
-<div class="card">
-  <h2>Whatsapp Services</h2>
-  <p>Whatsapp Bot Deploy</p>
-  <p>Whatsapp Channel React</p>
+  <!-- SERVICES -->
+  <section>
+    <div class="services">
+      <div class="card" data-aos="fade-up">
+        <h3>🤖 WhatsApp Bot</h3>
+        <p>Auto reply, movie bot, custom commands with 24/7 uptime.</p>
+      </div>
 
-  <h3>💰 Price List</h3>
-  <p>Whatsapp Bot Deploy : Rs.250</p>
-  <p>Channel React (1 Month) : Rs.400</p>
-  <p>Channel React (1 Week) : Rs.200</p>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>⚡ Channel React</h3>
+        <p>Original members react service with real engagement.</p>
+      </div>
 
-  <a class="btn" href="https://wa.me/94774707462?text=Hi-Whatsapp-Servise-💗">📞 Whatsapp Contact</a>
-  <a class="btn" href="https://whatsapp.com/channel/0029VbBYg438F2p5JNzRT83A">📢 Join Channel</a>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>🚀 Deploy Service</h3>
+        <p>Heroku / Netlify / Vercel website & bot deployment.</p>
+      </div>
+    </div>
+  </section>
 
-  <img src="https://files.catbox.moe/0zw8c0.jpg">
-  <img src="https://files.catbox.moe/mb9v7x.jpg">
+  <footer>
+    © 2026 Yasiya WhatsApp Services • Dark Anime Edition
+  </footer>
 
-  <p style="margin-top:15px;">Powered By : ɪ𝐓"ᴢ ɪᴍ ᴄᴅᴛ 𝐘ᴀꜱɪʏᴀ (ૐ•)</p>
-</div>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 900 });
+  </script>
+
+  <!-- Typing Animation -->
+  <script>
+    const text = "YASIYA WHATSAPP SERVICES";
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 90);
+      }
+    }
+    typeEffect();
+  </script>
 
 </body>
 </html>
